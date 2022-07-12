@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>最佳实践 | CosId</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script>
+    (function (global, doc, tag, src, script, m) {
+      script = doc.createElement(tag)
+      m = doc.getElementsByTagName(tag)[0]
+      script.async = 1
+      script.src = src
+      m.parentNode.insertBefore(script, m)
+      global.dataLayer = global.dataLayer || []
+      if (!global.gtag) {
+        global.gtag = function gtag () {
+          global.dataLayer.push(arguments)
+        }
+        global.gtag('js', new Date())
+        global.gtag('config', 'G-SP6EEGK56L')
+      }
+    })(window, document, 'script', 'https://www.googletagmanager.com/gtag/js?id=G-SP6EEGK56L')
+</script>
+    <meta name="description" content="通用、灵活、高性能分布式 ID 生成器">
+    
+    <link rel="preload" href="/assets/css/0.styles.a99daa2c.css" as="style"><link rel="preload" href="/assets/js/app.5eaa487b.js" as="script"><link rel="preload" href="/assets/js/4.92658219.js" as="script"><link rel="preload" href="/assets/js/24.a0b374c5.js" as="script"><link rel="prefetch" href="/assets/js/10.db84a696.js"><link rel="prefetch" href="/assets/js/11.e32f62da.js"><link rel="prefetch" href="/assets/js/12.d57a8fef.js"><link rel="prefetch" href="/assets/js/13.4170de54.js"><link rel="prefetch" href="/assets/js/14.f334abf4.js"><link rel="prefetch" href="/assets/js/15.0370d05c.js"><link rel="prefetch" href="/assets/js/16.6c751b5f.js"><link rel="prefetch" href="/assets/js/17.18be9471.js"><link rel="prefetch" href="/assets/js/18.fbe961b9.js"><link rel="prefetch" href="/assets/js/19.c59ffa19.js"><link rel="prefetch" href="/assets/js/20.4f5e91c0.js"><link rel="prefetch" href="/assets/js/21.8ed7354a.js"><link rel="prefetch" href="/assets/js/22.51165d42.js"><link rel="prefetch" href="/assets/js/23.8eceaa75.js"><link rel="prefetch" href="/assets/js/25.367537cb.js"><link rel="prefetch" href="/assets/js/26.314c5f06.js"><link rel="prefetch" href="/assets/js/27.4a48811f.js"><link rel="prefetch" href="/assets/js/28.6d4d03a7.js"><link rel="prefetch" href="/assets/js/29.b6a3a1c0.js"><link rel="prefetch" href="/assets/js/30.d050c53b.js"><link rel="prefetch" href="/assets/js/31.7569d2f6.js"><link rel="prefetch" href="/assets/js/32.ee506a7d.js"><link rel="prefetch" href="/assets/js/33.72dfec4a.js"><link rel="prefetch" href="/assets/js/34.9799e2f9.js"><link rel="prefetch" href="/assets/js/35.3349bdeb.js"><link rel="prefetch" href="/assets/js/5.968409bb.js"><link rel="prefetch" href="/assets/js/6.4e5b017e.js"><link rel="prefetch" href="/assets/js/7.0b531600.js"><link rel="prefetch" href="/assets/js/8.c01ee82c.js"><link rel="prefetch" href="/assets/js/9.704a34d1.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.66fcca01.js"><link rel="prefetch" href="/assets/js/vendors~notification.cbb41fca.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a99daa2c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CosId</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/guide/segment-chain.html" class="sidebar-link">号段链模式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>集成</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/cosid-jdbc.html" class="sidebar-link">CosId-Jdbc 模块</a></li><li><a href="/guide/cosid-redis.html" class="sidebar-link">CosId-Redis 模块</a></li><li><a href="/guide/cosid-zookeeper.html" class="sidebar-link">CosId-ZooKeeper 模块</a></li><li><a href="/guide/cosid-jackson.html" class="sidebar-link">CosId-Jackson 模块</a></li><li><a href="/guide/cosid-mybatis.html" class="sidebar-link">CosId-MyBatis 模块</a></li><li><a href="/guide/cosid-shardingsphere.html" class="sidebar-link">CosId-ShardingSphere 模块</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/api/" class="sidebar-link">IdGenerator</a></li><li><a href="/guide/api/id-converter.html" class="sidebar-link">IdConverter</a></li><li><a href="/guide/api/provider.html" class="sidebar-link">IdGeneratorProvider</a></li><li><a href="/guide/api/snowflake.html" class="sidebar-link">SnowflakeId</a></li><li><a href="/guide/api/segment.html" class="sidebar-link">SegmentId</a></li><li><a href="/guide/api/cosid-annotation.html" class="sidebar-link">CosIdAnnotationSupport</a></li><li><a href="/guide/api/sharding.html" class="sidebar-link">Sharding</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>常见问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>性能评测</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/perf-test.html" class="sidebar-link">JMH-Benchmark</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h1></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ahoo-Wang/CosId/edit/main/document/docs/guide/best-practices.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/12/2022, 2:45:44 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.5eaa487b.js" defer></script><script src="/assets/js/4.92658219.js" defer></script><script src="/assets/js/24.a0b374c5.js" defer></script>
+  </body>
+</html>
